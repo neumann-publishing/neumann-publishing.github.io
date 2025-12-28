@@ -3,15 +3,11 @@ import date from "lume/plugins/date.ts";
 import lightningCss from "lume/plugins/lightningcss.ts";
 import metas from "lume/plugins/metas.ts";
 
-const site = lume({
-	location:
-		Deno.env.get("DENO_ENV") == "production"
-			? "https://magazine.neumann.tokyo"
-			: "http://localhost:3000",
-});
+const site = lume();
 
 site.copy("upload-images");
 site.copy("assets");
+site.copy("CNAME");
 site.ignore("README.md", "caddy", "docker-compose.yml", "frpc.toml");
 
 site.use(date());

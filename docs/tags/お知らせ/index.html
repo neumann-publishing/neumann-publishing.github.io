@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+
+    <!-- TODO favicon -->
+    <!-- <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" /> -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const sidebar = document.querySelector("#js-sidebar");
+        const mainContainer = document.querySelector("#js-main-container");
+
+        document
+          .querySelector("#js-menu-button")
+          .addEventListener("click", (e) => {
+            e.preventDefault();
+            sidebar.style.display = "flex";
+            mainContainer.style.display = "none";
+          });
+
+        document
+          .querySelector("#js-close-button")
+          .addEventListener("click", (e) => {
+            e.preventDefault();
+            sidebar.style.display = "none";
+            mainContainer.style.display = "flex";
+          });
+      });
+    </script>
+
+    <title></title>
+  <meta property="og:type" content="website">
+<meta property="og:site_name" content="ノイマンマガジン - Neumann Magazine - for WEB">
+<meta property="og:locale" content="ja">
+<meta property="og:title" content="ノイマンマガジン - Neumann Magazine - for WEB">
+<meta property="og:url" content="https://magazine.neumann.tokyo/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/">
+<meta property="og:image" content="https://magazine.neumann.tokyo/assets/neumann-magazine.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="generator" content="Lume 3.1.2">
+</head>
+  <body class="layout">
+    <div class="global-container">
+      <div class="sidebar" id="js-sidebar">
+        <div class="close-button-container">
+          <button type="button" class="flat-button" id="js-close-button">
+            <span class="close-icon">×</span>
+          </button>
+        </div>
+        <div class="logo-container">
+          <a href="/" class="logo-link">
+            <img src="/assets/neumann-magazine.svg" width="220px" height="280px" alt="Neumann Magazine for Web" class="logo">
+          </a>
+        </div>
+        <div class="nav-container">
+          <h3 class="nav-title">Tags</h3>
+          <nav class="nav">
+            <ul class="nav-list">
+              <li>
+                <a href="/tags/%E6%BC%AB%E7%94%BB/">
+                  漫画
+                </a>
+              </li>
+              <li>
+                <a href="/tags/%E6%97%A5%E5%B8%B8/">
+                  日常
+                </a>
+              </li>
+              <li>
+                <a href="/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/">
+                  お知らせ
+                </a>
+              </li>
+              <li>
+                <a href="/tags/%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B/">
+                  お問い合わせ
+                </a>
+              </li>
+              <li>
+                <a href="/tags/%E8%B2%B4%E6%A7%98%E3%81%AB%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%81%AF%E3%81%BE%E3%81%A0%E6%97%A9%E3%81%84%EF%BC%81/">
+                  貴様にプログラミングはまだ早い！
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="main-container" id="js-main-container">
+        <div class="menu-button-container">
+          <button type="button" class="flat-button" id="js-menu-button">
+            <img src="/assets/menu.svg" alt="menu" width="32px" height="32px">
+          </button>
+          <a href="/" class="site-title-link">
+            <h1 class="site-title">ノイマンマガジン for Web</h1>
+          </a>
+        </div>
+        <main class="main">
+          <div class="content"><div class="search-container">
+  <div id="search"></div>
+</div>
+
+<div class="posts-list">
+  <div class="posts-list-card">
+    <a href="/posts/2025-05-30-tech-book-festival-18/" class="posts-list-card-link">
+      <h2 class="posts-list-card-title">技術書典１８参加情報</h2>
+    </a>
+    <div class="posts-list-card-info">
+      <div class="posts-list-card-date">
+        2025-05-31 15:26:00
+      </div>
+      <div class="posts-list-card-author">馬場香月</div>
+    </div>
+    <div class="posts-list-card-tags">
+      <a class="posts-list-card-tag" data-pagefind-filter="tag" href="/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B">お知らせ</a>
+    </div>
+  </div>
+  <div class="posts-list-card">
+    <a href="/posts/2025-03-28_techbookfest18/" class="posts-list-card-link">
+      <h2 class="posts-list-card-title">技術書典18に「さ１９：ノイマンパブリッシング」として参加します</h2>
+    </a>
+    <div class="posts-list-card-info">
+      <div class="posts-list-card-date">
+        2025-03-29 04:43:00
+      </div>
+      <div class="posts-list-card-author">馬場香月</div>
+    </div>
+    <div class="posts-list-card-tags">
+      <a class="posts-list-card-tag" data-pagefind-filter="tag" href="/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B">お知らせ</a>
+    </div>
+  </div>
+  <div class="posts-list-card">
+    <a href="/posts/neumann-exhibition-2024-10/" class="posts-list-card-link">
+      <h2 class="posts-list-card-title">個展「ノイマンDIY作品展」を開催します</h2>
+    </a>
+    <div class="posts-list-card-info">
+      <div class="posts-list-card-date">
+        2024-10-08 17:15:00
+      </div>
+      <div class="posts-list-card-author">馬場香月</div>
+    </div>
+    <div class="posts-list-card-tags">
+      <a class="posts-list-card-tag" data-pagefind-filter="tag" href="/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B">お知らせ</a>
+    </div>
+  </div>
+  <div class="posts-list-card">
+    <a href="/posts/start-a-blog/" class="posts-list-card-link">
+      <h2 class="posts-list-card-title">ノイマンマガジンについて</h2>
+    </a>
+    <div class="posts-list-card-info">
+      <div class="posts-list-card-date">
+        2024-08-22 02:05:00
+      </div>
+      <div class="posts-list-card-author">馬場香月</div>
+    </div>
+    <div class="posts-list-card-tags">
+      <a class="posts-list-card-tag" data-pagefind-filter="tag" href="/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B">お知らせ</a>
+    </div>
+  </div>
+  <div class="posts-list-card">
+    <a href="/posts/test/" class="posts-list-card-link">
+      <h2 class="posts-list-card-title">こんにちははじめまして。</h2>
+    </a>
+    <div class="posts-list-card-info">
+      <div class="posts-list-card-date">
+        2024-08-21 22:12:00
+      </div>
+      <div class="posts-list-card-author">アッサム</div>
+    </div>
+    <div class="posts-list-card-tags">
+      <a class="posts-list-card-tag" data-pagefind-filter="tag" href="/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B">お知らせ</a>
+    </div>
+  </div>
+</div>
+
+<div class="posts-list-pagination">
+  <div class="posts-list-pagination-previous">
+  </div>
+  <div class="posts-list-pagination-next">
+  </div>
+</div>
+</div>
+        </main>
+      </div>
+    </div>
+  
+
+</body></html>

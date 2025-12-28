@@ -37,7 +37,7 @@
     },
     "build": {
       "description": "Build the site for production",
-      "command": "deno task lume"
+      "command": "deno task lume --dest docs --location https://magazine.neumann.tokyo"
     },
     "serve": {
       "description": "Run and serve the site for development",
