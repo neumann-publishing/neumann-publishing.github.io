@@ -1,0 +1,46 @@
+---
+layout: layouts/base.vto
+---
+
+<div class="search-container">
+  <div id="search"></div>
+</div>
+
+<div class="posts-list">
+  {{ for post of results }}
+  <div class="posts-list-card">
+    <a href="{{ post.url }}" class="posts-list-card-link">
+      <h2 class="posts-list-card-title">{{ post.title }}</h2>
+    </a>
+    <div class="posts-list-card-info">
+      <div class="posts-list-card-date">
+        {{ post.date |> date("DATETIME") }}
+      </div>
+      <div class="posts-list-card-author">{{ post.author }}</div>
+    </div>
+    <div class="posts-list-card-tags">
+      {{ for tag of post.tags }}
+      <a
+        class="posts-list-card-tag"
+        data-pagefind-filter="tag"
+        href="/tags/{{ encodeURI(tag) }}"
+        >{{ tag }}</a
+      >
+      {{ /for }}
+    </div>
+  </div>
+  {{ /for }}
+</div>
+
+<div class="posts-list-pagination">
+  <div class="posts-list-pagination-previous">
+    {{ if pagination.previous }}
+    <a href="{{ pagination.previous }}">前へ</a>
+    {{ /if }}
+  </div>
+  <div class="posts-list-pagination-next">
+    {{ if pagination.next }}
+    <a href="{{ pagination.next }}">次へ</a>
+    {{ /if }}
+  </div>
+</div>

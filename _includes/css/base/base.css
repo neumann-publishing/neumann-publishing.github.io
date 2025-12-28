@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Zen+Kurenaido&display=swap");
+
+:root {
+  --contents-width: 1300px;
+
+  --global-bg-color: wheat;
+  --base-bg-color: ivory;
+  --base-fg-color: rgb(10, 41, 3);
+  --assort-bg-color: wheat;
+  --assort-fg-color: darkorange;
+  --accent-bg-color: brown;
+  --accent-fg-color: ivory;
+}
+
+body {
+  font-family: "Zen Kurenaido", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--base-fg-color);
+  background-color: var(--global-bg-color);
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: var(--accent-bg-color);
+  font-weight: bold;
+}

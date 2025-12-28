@@ -1,0 +1,3 @@
+type: posts
+layout: layouts/post.vto
+openGraphLayout: /layouts/og_images.jsx

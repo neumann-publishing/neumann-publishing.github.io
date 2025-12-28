@@ -1,0 +1,6 @@
+@import "css/base/normalize.css";
+@import "css/base/base.css";
+@import "css/base/layout.css";
+
+@import "css/pages/post.css";
+@import "css/pages/posts-list.css";

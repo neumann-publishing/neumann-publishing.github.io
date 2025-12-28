@@ -1,0 +1,24 @@
+---
+layout: layouts/base.vto
+---
+
+<div class="post">
+  <h1 class="post-title">{{ title }}</h1>
+  <div class="post-info-basic">
+    <div class="post-date">{{ date |> date("DATETIME") }}</div>
+    <div class="post-author">{{ author }}</div>
+  </div>
+  <div class="post-tags">
+    {{ for tag of tags }}
+    <a
+      class="post-tag"
+      data-pagefind-filter="tag"
+      href="/tags/{{ encodeURI(tag) }}"
+      >{{ tag }}</a
+    >
+    {{ /for }}
+  </div>
+
+  <div class="post-content">{{ content }}</div>
+  <a href="/">TOPに戻る</a>
+</div>

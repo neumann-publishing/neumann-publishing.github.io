@@ -1,0 +1,111 @@
+---
+metas:
+  title: "=title"
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+
+    <!-- TODO favicon -->
+    <!-- <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" /> -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const sidebar = document.querySelector("#js-sidebar");
+        const mainContainer = document.querySelector("#js-main-container");
+
+        document
+          .querySelector("#js-menu-button")
+          .addEventListener("click", (e) => {
+            e.preventDefault();
+            sidebar.style.display = "flex";
+            mainContainer.style.display = "none";
+          });
+
+        document
+          .querySelector("#js-close-button")
+          .addEventListener("click", (e) => {
+            e.preventDefault();
+            sidebar.style.display = "none";
+            mainContainer.style.display = "flex";
+          });
+      });
+    </script>
+
+    <title>{{ title }}</title>
+  </head>
+  <body class="layout">
+    <div class="global-container">
+      <div class="sidebar" id="js-sidebar">
+        <div class="close-button-container">
+          <button type="button" class="flat-button" id="js-close-button">
+            <span class="close-icon">×</span>
+          </button>
+        </div>
+        <div class="logo-container">
+          <a href="/" class="logo-link">
+            <img
+              src="/assets/neumann-magazine.svg"
+              width="220px"
+              height="280px"
+              alt="Neumann Magazine for Web"
+              class="logo"
+            />
+          </a>
+        </div>
+        <div class="nav-container">
+          <h3 class="nav-title">Tags</h3>
+          <nav class="nav">
+            <ul class="nav-list">
+              {{ for tag of [...new Set(search.pages("type=posts", "date=desc").flatMap((post) => post.tags))] }}
+              <li>
+                <a href="/tags/{{ encodeURI(tag) }}/">
+                  {{ tag }}
+                </a>
+              </li>
+              {{/for}}
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="main-container" id="js-main-container">
+        <div class="menu-button-container">
+          <button type="button" class="flat-button" id="js-menu-button">
+            <img src="/assets/menu.svg" alt="menu" width="32px" height="32px" />
+          </button>
+          <a href="/" class="site-title-link">
+            <h1 class="site-title">ノイマンマガジン for Web</h1>
+          </a>
+        </div>
+        <main class="main">
+          <div class="content">{{ content }}</div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
