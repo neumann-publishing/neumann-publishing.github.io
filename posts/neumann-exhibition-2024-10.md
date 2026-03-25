@@ -4,6 +4,7 @@ date: 2024-10-08T08:15:00.000Z
 author: 馬場香月
 tags:
   - お知らせ
+  - イベント参加情報
 ---
 ![ノイマンDIY作品展](/upload-images/dm.jpg)
 
